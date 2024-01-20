@@ -17,8 +17,8 @@ jobs:
           pip install pytest ruff black flake8
       - name: Run Linters
         run: |
-          flake8 .
           black --check --diff .
+          flake8 .
           ruff check .
       - name: Run Test
         run: pytest -s --verbose ./tests
